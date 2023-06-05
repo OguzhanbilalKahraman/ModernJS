@@ -1,7 +1,8 @@
 <h1 align="center">JavaScript Bootcamp</h1>
 
 <p align="center">
-  <img src="" alt="JavaScript">
+  <img src="![Unofficial_JavaScript_logo_2 svg](https://github.com/OguzhanbilalKahraman/ModernJSBootcamp/assets/73184456/41723d8a-a881-4f32-883f-99b6de35c3a5)
+" alt="JavaScript">
 </p>
 
 <p align="center">
