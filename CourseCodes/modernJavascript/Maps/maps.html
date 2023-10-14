@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ogrenciler = new Map();
+      let user = { username: "inci kahraman" };
+
+      ogrenciler.set(1, "oguzhan kahraman");
+      ogrenciler.set("20360859038", "oguz kahra");
+      ogrenciler.set(true, "ebrar inci");
+      ogrenciler.set(user, "ebrar inci");
+
+      console.log(ogrenciler.get(1)); //always gets oguzhan kahraman
+      console.log(ogrenciler.get("20360859038")); // always gets oguz kahra
+      console.log(ogrenciler.get(true)); // always gets ebrar inci
+      console.log(ogrenciler.get(user));
+
+      let sonuc;
+
+      sonuc = ogrenciler.size;
+      sonuc = ogrenciler.has(2);
+      //ogrenciler.delete(1);
+      sonuc = ogrenciler.size;
+      // console.log(ogrenciler.get(1)); //undefined cause u deleted the 1, oguzhan kahraman on 24. letter
+      sonuc = ogrenciler.size;
+
+      // ogrenciler.clear(); it's clean everything
+
+      // console.log(sonuc);
+
+      // for(let x of ogrenciler.keys()){
+      //     console.log(x);//all datas getting
+      // }
+
+      // for(let x of ogrenciler.values()){
+      //     console.log(x);//all datas getting
+      // }
+
+      for (let [key, value] of ogrenciler.entries()) {
+        console.log(x); //all datas getting
+      }
+    </script>
+  </body>
+</html>
