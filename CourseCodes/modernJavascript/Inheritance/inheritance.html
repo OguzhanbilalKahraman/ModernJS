@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //kisi => k1, k2
+      //same methods functions we can deploy it with inheritance
+      // ogrenci => o1,o2
+      //parent
+      class Kisi {
+        constructor(ad, dogumYili) {
+          console.log("kisi ctor");
+          this.ad = ad;
+          this.dogumYili = dogumYili;
+        }
+
+        yasHesapla() {
+          let tarih = new Date().getFullYear();
+          return tarih - this.dogumYili;
+        }
+
+        kendiniTanit() {
+          return `benim adim ${this.ad}`;
+        }
+      }
+
+      //child
+      class Ogrenci extends Kisi {
+        constructor(ad, dogumYili, okulNumarasi) {
+          console.log("ogrenci ctor");
+          super(ad, dogumYili);
+          this.okulNumarasi = okulNumarasi;
+        }
+
+        dersCalis() {
+          return `${this.ad} ders calisiyor.`;
+        }
+
+        kendiniTanit() {
+          return `benim adim ${this.ad} ve okul numaram ${this.okulNumarasi}`;
+        }
+      }
+
+      class Ogretmen extends Kisi {
+        constructor(ad, dogumYili, brans) {
+          console.log("ogrenci ctor");
+          super(ad, dogumYili);
+          this.brans = brans;
+        }
+
+        dersTanit() {
+          return `${this.brans} adlı dersi anlatacagim.`;
+        }
+
+        kendiniTanit() {
+          return `benim adim ${this.ad} ve ders bransim ${this.brans}`;
+        }
+      }
+
+      let kisi = new Kisi("ali", 1990);
+      let ogrenci = new Ogrenci("ahmet", 2000, 472);
+      let ogretmen = new Ogretmen("Ayca", 1975, "matematik");
+
+      //   console.log(kisi.yasHesapla());
+      //   console.log(ogrenci.yasHesapla());
+      //   console.log(ogrenci.dersCalis());
+
+      console.log(kisi.kendiniTanit());
+      console.log(ogrenci.kendiniTanit());
+      console.log(ogretmen.kendiniTanit());
+      console.log(ogretmen.dersTanit());
+    </script>
+  </body>
+</html>
